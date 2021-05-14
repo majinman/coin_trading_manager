@@ -1,0 +1,45 @@
+###### Initializing Server ######
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    update_coin_info()
+  File "/Users/ethan/DevProjects/PythonProjects/coinsystem/crawler/coin.py", line 21, in update_coin_info
+    is_existing = db.session.query(CoinInfo).filter(CoinInfo.name == coin['market']).first()
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3300, in first
+    ret = list(self[0:1])
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3078, in __getitem__
+    return list(res)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3405, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3430, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1485, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/pymysql/cursors.py", line 165, in execute
+    result = self._query(query)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/pymysql/connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/pymysql/connections.py", line 1061, in _read_query_result
+    result.read()
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/pymysql/connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/pymysql/connections.py", line 1008, in _read_packet
+    recv_data = self._read_bytes(bytes_to_read)
+  File "/Users/ethan/.virtualenvs/crawler/lib/python3.6/site-packages/pymysql/connections.py", line 1022, in _read_bytes
+    self._sock.settimeout(self._read_timeout)
+KeyboardInterrupt
